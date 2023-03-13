@@ -15,8 +15,4 @@ const userSchema = new Schema({
     },
 });
 
-userSchema.methods.comparePassword = async function (password) {
-    return password === this.password;
-};
-
 export default mongoose.model("User", userSchema);
